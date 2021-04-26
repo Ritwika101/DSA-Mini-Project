@@ -7,45 +7,45 @@ Time complexity for function display() - O(n)<br>
 
 Pseudo Code <br>
 void enqueue (int item, int pr)<br>
-	struct node *p<br>
-	struct node *temp <-(struct node *)malloc(sizeof(struct node))<br>
-	temp -> info <- item<br>
-	temp -> prn  <- prior<br>
-	temp -> next  <- NULL<br>
-	IF rear == NULL  THEN<br>
-		front <- temp<br>
-		rear <- temp <br>
-	ELSE<br>
-		p <- front<br>
-		IF (p -> prn) > (temp -> prn)  THEN<br>
-			temp -> next  <-  front<br>
-			front <- temp<br>
-			return<br>
-		END IF<br>
-		WHILE ((p -> next) !=  NULL) and (p -> next -> prn) <= (temp -> prn)  do<br>
-			p <- p->next<br>
-		END WHILE<br>
-		IF (p -> next) == NULL  THEN<br>
-			p -> next  <- temp<br>
-			rear <- p->next<br>
-		ELSE<br>
-			temp -> next <- p -> next<br>
-			p -> next <- temp<br>
-END IF<br>
-END IF<br>
+	&nbsp;struct node *p<br>
+	&nbsp;struct node *temp <-(struct node *)malloc(sizeof(struct node))<br>
+	&nbsp;temp -> info <- item<br>
+	&nbsp;temp -> prn  <- prior<br>
+	&nbsp;temp -> next  <- NULL<br>
+	&nbsp;IF rear == NULL  THEN<br>
+		&nbsp;&nbsp;front <- temp<br>
+		&nbsp;&nbsp;rear <- temp <br>
+	&nbsp;ELSE<br>
+		&nbsp;&nbsp;p <- front<br>
+		&nbsp;&nbsp;IF (p -> prn) > (temp -> prn)  THEN<br>
+			&nbsp;&nbsp;&nbsp;temp -> next  <-  front<br>
+			&nbsp;&nbsp;&nbsp;front <- temp<br>
+			&nbsp;&nbsp;&nbsp;return<br>
+		&nbsp;&nbsp;END IF<br>
+		&nbsp;&nbsp;WHILE ((p -> next) !=  NULL) and (p -> next -> prn) <= (temp -> prn)  do<br>
+			&nbsp;&nbsp;&nbsp;p <- p->next<br>
+		&nbsp;&nbsp;END WHILE<br>
+		&nbsp;&nbsp;IF (p -> next) == NULL  THEN<br>
+			&nbsp;&nbsp;&nbsp;p -> next  <- temp<br>
+			&nbsp;&nbsp;&nbsp;rear <- p->next<br>
+		&nbsp;&nbsp;ELSE<br>
+			&nbsp;&nbsp;&nbsp;temp -> next <- p -> next<br>
+			&nbsp;&nbsp;&nbsp;p -> next <- temp<br>
+&nbsp;&nbsp;END IF<br>
+&nbsp;END IF<br>
 END<br>
 
 void display( )<br>
-DISPLAY (“Priority Queue”)<br>
-	struct node *p <- front<br>
-	IF p == NULL  THEN<br>
-		DISPLAY (“Queue is empty.\n”)<br>
-		return<br>
-	END IF<br>
-	WHILE p != NULL  do<br>
-		DISPLAY (p -> info)<br>
-		p  <- p->next<br>
-	END WHILE<br>
-	DISPLAY (“\n”)<br>
+&nbsp;DISPLAY (“Priority Queue”)<br>
+	&nbsp;&nbsp;struct node *p <- front<br>
+	&nbsp;&nbsp;IF p == NULL  THEN<br>
+		&nbsp;&nbsp;&nbsp;DISPLAY (“Queue is empty.\n”)<br>
+		&nbsp;&nbsp;&nbsp;return<br>
+	&nbsp;&nbsp;END IF<br>
+	&nbsp;&nbsp;WHILE p != NULL  do<br>
+		&nbsp;&nbsp;&nbsp;DISPLAY (p -> info)<br>
+		&nbsp;&nbsp;&nbsp;p  <- p->next<br>
+	&nbsp;&nbsp;END WHILE<br>
+	&nbsp;&nbsp;DISPLAY (“\n”)<br>
 END
 
